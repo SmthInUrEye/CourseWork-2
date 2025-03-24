@@ -8,16 +8,16 @@ import java.util.Collection;
 @Service
 public interface QuestionService{
 
-	void add(String question,String answer);
+void add(String question,String answer);
 
-	void remove(Question question);
+void remove(Question question);
 
-	Collection<Question> find(String query);
+Collection<Question> find(String query);
 
-	Collection<Question> getAll();
+Collection<Question> getAll();
 
-	Question getRandomQuestion();
+Question getRandomQuestion();
 
-	Question getQuestion(String question,String answer);
+Question getQuestion(String question,String answer);
 
 }
