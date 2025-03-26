@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-public class ExamController{
-private final ExaminerService examinerService;
+public class ExamController {
+    private final ExaminerService examinerService;
 
-@Autowired
-public ExamController(ExaminerService examinerService){
- this.examinerService=examinerService;
-}
+    @Autowired
+    public ExamController(ExaminerService examinerService) {
+        this.examinerService = examinerService;
+    }
 
-@GetMapping("/exam/getQuestions")
-public Collection<Question> getQuestions(@RequestParam int amount){
- return (examinerService.getQuestions(amount));
-}
+    @GetMapping("/exam/getQuestions")
+    public Collection<Question> getQuestions(@RequestParam int amount) {
+        return (examinerService.getQuestions(amount));
+    }
 }
 
